@@ -1,0 +1,552 @@
+/* --------------------
+  Global Styles
+-------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background: #f5f5f5;
+  color: #333;
+}
+
+section {
+  padding: 80px 20px; /* Consistent spacing */
+}
+
+/* --------------------
+  Header & Navbar
+-------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  background-color: #1b4965;
+  background-image: radial-gradient(
+      rgba(255, 255, 255, 0.08) 2px,
+      transparent 2px
+    );
+  background-size: 30px 30px;
+  color: #fff;
+  position:unset;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.logo:hover {
+  color: #1d85df;
+  transform: scale(1.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: #bee9e8;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  color: #2d78b9;
+}
+
+/* --------------------
+  Home Section
+-------------------- */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+    background-color: #2a6f97;
+  background-image: radial-gradient(
+      rgba(255, 255, 255, 0.1) 2px,   /* circle size + color */
+      transparent 2px
+    );
+  background-size: 30px 30px; /* spacing between circles */
+  min-height: 80vh;
+  text-align: center;
+}
+
+.home img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 2rem 0 5rem;
+  border: 3px solid #000;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.home-content p {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #bee9e8;
+  font-weight: 700;
+}
+
+/* --------------------
+  Social Links
+-------------------- */
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-links a {
+  font-size: 2.5rem;
+  color: #222;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* --------------------
+  Section Headers
+-------------------- */
+.skills-header,
+.language-header,
+.projects-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.skills h1,
+.language h1,
+.projects h1 {
+  color: #bee9e8;
+  font-size: 2.4rem;
+  flex: 1;
+  min-width: 220px;
+  text-align: right;
+  padding-right: 20px;
+  border-right: 2px solid #bee9e8;
+}
+
+.skills p,
+.language p,
+.projects p {
+  flex: 2;
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  font-weight: 500;
+  color: #bee9e8;
+  padding-left: 20px;
+}
+
+/* --------------------
+  Skills Section
+-------------------- */
+.skills {
+  background-color: #2a6f97;
+  background-image: radial-gradient(
+      rgba(255, 255, 255, 0.1) 2px,   /* circle size + color */
+      transparent 2px
+    );
+  background-size: 30px 30px; /* spacing between circles */
+  padding: 50px 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card i {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #9cd3d3;
+}
+
+.skill-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  color: #dceef0;
+  line-height: 1.6;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet: 2 per row */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------
+  Language Section
+-------------------- */
+.language {
+  background-color: #2a6f97;
+  background-image: radial-gradient(
+      rgba(255, 255, 255, 0.1) 2px,   /* circle size + color */
+      transparent 2px
+    );
+  background-size: 30px 30px; /* spacing between circles */
+  padding: 50px 0;
+}
+
+.language ul {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.language ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #bee9e8;
+  transform: translateX(-50%);
+}
+
+.language ul li {
+  position: relative;
+  width: 45%;
+  margin: 20px 0;
+  padding: 15px 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Zig-zag layout */
+.language ul li:nth-child(odd) {
+  margin-right: auto;
+  text-align: right;
+}
+
+.language ul li:nth-child(even) {
+  margin-left: auto;
+  text-align: left;
+}
+
+/* Decorative dots */
+.language ul li::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  background: #bee9e8;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.language ul li:nth-child(odd)::before {
+  right: -22px;
+}
+
+.language ul li:nth-child(even)::before {
+  left: -22px;
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  .language ul::before {
+    left: 16px;
+  }
+  .language ul li {
+    width: 100%;
+    text-align: left !important;
+    padding-left: 44px;
+    margin: 20px 0;
+  }
+  .language ul li::before {
+    left: 10px;
+    right: auto;
+    top: 22px;
+  }
+}
+
+/* --------------------
+  Projects Section
+-------------------- */
+.projects {
+  background-color: #2a6f97;
+  background-image: radial-gradient(
+      rgba(255, 255, 255, 0.1) 2px,   /* circle size + color */
+      transparent 2px
+    );
+  background-size: 30px 30px; /* spacing between circles */
+  padding: 50px 0;
+}
+
+.projects ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.projects ul li {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projects ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.projects ul li img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.projects ul li h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.projects ul li p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.projects ul li a {
+  color: #1d85df;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+.projects ul li a:hover {
+  color: #1a6fb8; /* Changed to a slightly darker blue for better hover effect */
+  text-decoration: underline;
+}
+
+/* --------------------
+  Footer
+-------------------- */
+.footer {
+  background-color: #1b4965;
+  background-image: radial-gradient(
+      rgba(255, 255, 255, 0.08) 2px,
+      transparent 2px
+    );
+  background-size: 30px 30px;
+  padding: 40px 20px;
+  color: #bee9e8;
+  border-top: 2px solid #2a6f97;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.footer-left p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: #bee9e8;
+}
+
+.footer-right a {
+  font-size: 1.6rem;
+  color: #bee9e8;
+  margin-left: 18px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-right a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* --------------------
+  Responsive Adjustments
+-------------------- */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home img {
+    margin: 0 0 1.5rem 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    margin-top: 15px;
+  }
+}
+
+#toTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: #1b4965;
+  color: #bee9e8;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 999;
+}
+
+#toTop:hover {
+  background-color: #bee9e8;
+  color: #1b4965;
+  transform: scale(1.1);
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px; /* Optional: center vertically in viewport */
+}
+.enroll {
+  background-color: #2a6f97;
+  background-image: radial-gradient(
+      rgba(255, 255, 255, 0.1) 2px,   /* circle size + color */
+      transparent 2px
+    );
+  background-size: 30px 30px; /* spacing between circles */
+  padding: 50px 0;
+}
+
+.enroll-button {
+  display: inline-block;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  text-decoration: none;
+  font-size: xx-large;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.enroll-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  background: #0056b3;
+  color: white;
+  text-decoration: none;
+}
+
+.enroll-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  background: #004085;
+}
+
+.enroll-button:focus {
+  outline: 3px solid rgba(0,123,255,0.5);
+  outline-offset: 2px;
+}
